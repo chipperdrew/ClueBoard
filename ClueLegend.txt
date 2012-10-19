@@ -1,0 +1,11 @@
+G, Garage
+C, Computing Room
+K, Kitchen
+L, Laundry Room
+B, Bathroom
+M, Music Room
+F, Fancy Deck
+A, Attic
+T, Theatre Room
+X, Closet
+W, Walkway
