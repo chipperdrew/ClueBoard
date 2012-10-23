@@ -6,7 +6,7 @@ public class RoomCell extends BoardCell {
 	private DoorDirection doorDirection;
 	private char Initial;
 	
-	
+	// Calls super, determines door direction.
 	public RoomCell(int row, int col, String lets) {
 		super(row, col);
 		Initial = lets.charAt(0);
@@ -21,7 +21,29 @@ public class RoomCell extends BoardCell {
 		else {
 			doorDirection = DoorDirection.NONE;
 		}
+		//this.calcAdjacencies();
 	}
+
+	// Create adjacency lists for Rooms (should be blank) and Doors (should contain one value)
+//	@Override
+//	public void calcAdjacencies() {
+//		// System.out.println("Entered calcAdjacencies");
+//		if(doorDirection == DoorDirection.UP) {
+//			adjList.add(Board.calcIndex(getRow()-1, getCol()));
+//		}
+//		else if(doorDirection == DoorDirection.DOWN) {
+//			adjList.add(Board.calcIndex(getRow()+1, getCol()));
+//		}
+//		else if(doorDirection == DoorDirection.LEFT) {
+//			adjList.add(Board.calcIndex(getRow(), getCol()-1));
+//		}
+//		else if(doorDirection == DoorDirection.RIGHT) {
+//			adjList.add(Board.calcIndex(getRow(), getCol()+1));
+//		}
+//		else
+//			return;
+//	}
+	
 	@ Override
 	public boolean isRoom() {
 		return (DoorDirection.NONE == doorDirection);
